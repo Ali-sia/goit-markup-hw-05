@@ -103,7 +103,7 @@
       .btn1:focus::before {
         transform: translateY(-50%);
       } */
-      .portfolio-list {
+      /* .portfolio-list {
         margin: 100px 400px;
       }
 
@@ -123,40 +123,106 @@
       }
       .link:hover .portfolio-thumb:hover::before {
         transform: translateX(0);
+      } */
+      p,
+      h3 {
+        margin: 0;
+        padding: 0;
+      }
+      .portfolio-link {
+        position: relative;
+
+        width: 370px;
+        outline: 2px dashed darksalmon;
+        margin-top: 50px;
+        margin-left: 100px;
+      }
+      .portfolio-link:hover .overlay-text {
+        opacity: 1;
+      }
+
+      .portfolio-thumb {
+        position: relative;
+      }
+
+      .portfolio-thumb::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        opacity: 0;
+
+        background-color: rgba(33, 150, 243, 0.9);
+      }
+
+      .portfolio-thumb:hover::before {
+        opacity: 1;
+      }
+
+      .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        opacity: 0;
+
+        width: 322px;
+        background-color: rgb(220, 20, 60);
       }
     </style>
   </head>
   <body>
+    <div class="portfolio-link">
+      <!--article-->
+      <div class="portfolio-thumb">
+        <img
+          src="./images/portfolio/technokryak.jpg"
+          alt="Открытый на ноутбуке веб-сайт"
+          width="370"
+        />
+        <div class="overlay-text">
+          <p>
+            Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
+            это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
+          </p>
+        </div>
+      </div>
+      <!-- текст, который выводится в оверлей -->
+
+      <div class="prortfolio-meta">
+        <h3 class="title">Технокряк</h3>
+        <p>Веб-сайт</p>
+      </div>
+    </div>
     <!-- <button class="btn">Подписаться</button>
 
     <button class="btn1">Подписаться</button> -->
 
-    <ul class="portfolio-list list">
-      <li class="item">
-        <a href="" class="link">
-          <div class="portfolio-thumb">
-            <img
-              src="./images/portfolio/technokryak.jpg"
-              alt="Открытый на ноутбуке веб-сайт"
-              width="370"
-            />
-            <div class="portfolio-overlay">
-              <div class="portfolio-text">
-                <p>
-                  <!-- Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+    <!-- <div class="portfolio-thumb">
+      <img
+        src="./images/portfolio/technokryak.jpg"
+        alt="Открытый на ноутбуке веб-сайт"
+        width="370"
+      />
+       <div class="portfolio-overlay"> -->
+    <!-- <div class="portfolio-text">
+        <p>
+           Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице. -->
-                  тестовый текст. решить проблему
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-caption">
-            <h3 class="title">Технокряк</h3>
-            <p>Веб-сайт</p>
-          </div>
-        </a>
-      </li>
-    </ul>
+    <!-- тестовый текст. решить проблему
+        </p>
+      </div> -->
+    <!-- </div> -->
+
+    <!-- <div class="portfolio-caption">
+        <h3 class="title">Технокряк</h3>
+        <p>Веб-сайт</p>
+      </div>
+    </div>  -->
   </body>
 </html>
