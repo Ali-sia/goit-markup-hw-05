@@ -103,72 +103,104 @@
       .btn1:focus::before {
         transform: translateY(-50%);
       } */
-      /* .portfolio-list {
-        margin: 100px 400px;
-      }
-
-      .portfolio-thumb::before {
-        position: relative;
-      }
-
-      .portfolio-overlay {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(33, 150, 243, 0.9);
-
-        transform: translateX(-100%);
-      }
-      .link:hover .portfolio-thumb:hover::before {
-        transform: translateX(0);
-      } */
       p,
       h3 {
         margin: 0;
         padding: 0;
       }
+      p {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.03em;
+      }
+
       .portfolio-link {
         position: relative;
 
         width: 370px;
         outline: 2px dashed darksalmon;
-        margin-top: 50px;
-        margin-left: 100px;
+        margin: 50px auto;
       }
-      .portfolio-link:hover .overlay-text {
+      /* .portfolio-link:hover .overlay-text {
         opacity: 1;
-      }
+      } */
+      /* .portfolio-link:hover .portfolio-thumb::before {
+        transform: translateX(0);
+      } */
 
       .portfolio-thumb {
         position: relative;
+        overflow: hidden;
       }
 
-      .portfolio-thumb::before {
+      /* .portfolio-thumb::before {
         content: '';
+
         display: inline-block;
         position: absolute;
-
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
 
         opacity: 0;
+        transform: translateX(-100%);
+
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        background-color: rgba(33, 150, 243, 0.9);
+      } */
+
+      .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        transform: translateX(-100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
         background-color: rgba(33, 150, 243, 0.9);
       }
 
-      .portfolio-thumb:hover::before {
-        opacity: 1;
+      .portfolio-link:hover .portfolio-overlay {
+        transform: translateX(0);
       }
+
+      .portfolio-overlay1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        transform: translateY(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        background-color: rgba(33, 150, 243, 0.9);
+      }
+
+      .portfolio-link:hover .portfolio-overlay1 {
+        transform: translateY(0);
+      }
+
+      /* .portfolio-thumb:hover::before {
+        opacity: 1;
+      } */
+      /* .portfolio-thumb:hover .portfolio-overlay {
+        opacity: 1;
+      } */
 
       .overlay-text {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
 
-        opacity: 0;
+        /* opacity: 0; */
+        transform: translate(-50%, -50%);
 
         width: 322px;
         background-color: rgb(220, 20, 60);
@@ -177,22 +209,43 @@
   </head>
   <body>
     <div class="portfolio-link">
-      <!--article-->
       <div class="portfolio-thumb">
         <img
           src="./images/portfolio/technokryak.jpg"
           alt="Открытый на ноутбуке веб-сайт"
           width="370"
         />
-        <div class="overlay-text">
-          <p>
-            Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
-            это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
-          </p>
+        <div class="portfolio-overlay">
+          <div class="overlay-text card1">
+            <p>
+              Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
+              это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
+            </p>
+          </div>
         </div>
       </div>
-      <!-- текст, который выводится в оверлей -->
+      <div class="prortfolio-meta">
+        <h3 class="title">Технокряк</h3>
+        <p>Веб-сайт</p>
+      </div>
+    </div>
 
+    <div class="portfolio-link">
+      <div class="portfolio-thumb">
+        <img
+          src="./images/portfolio/project-boxes.jpg"
+          alt="Открытый на ноутбуке веб-сайт"
+          width="370"
+        />
+        <div class="portfolio-overlay1">
+          <div class="overlay-text">
+            <p>
+              Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все
+              это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
+            </p>
+          </div>
+        </div>
+      </div>
       <div class="prortfolio-meta">
         <h3 class="title">Технокряк</h3>
         <p>Веб-сайт</p>
